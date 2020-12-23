@@ -6,15 +6,34 @@
 // Evento de load al estar completamente cargada la página
 window.addEventListener( 'load', () => {
   let cards = Array.from( document.querySelectorAll('.card') ),
-      conta = document.querySelector( '#contact' )
+      conta = document.querySelector( '#contact' ),
+      soci  = Array.from( document.querySelectorAll( 'aside a' ) )
   animationsFirstEntry()
-  cards.forEach( itm => itm.addEventListener( 'click', function(e){ 
+  cards.forEach( itm => {
+      itm.addEventListener('mouseover', function(){
+        this.classList.add('animated', 'bounce')
+      })
+      itm.addEventListener('mouseleave', function(){
+        this.classList.remove('animated', 'bounce')
+      })
+      itm.addEventListener( 'click', function(){ 
         modals( itm.querySelector('h2').textContent )
-      } ) 
+      } ) }
     )
     conta.addEventListener( 'click', (e) => {
       modals( e.target.textContent )
     })
+  soci.forEach( ( itm, idx ) => {
+    setTimeout(() => {
+      itm.classList.add('animated', 'infinite', 'zoomIn')
+    }, 1000 * idx)
+    itm.addEventListener('mouseover', function(){
+      this.classList.remove('animated', 'infinite', 'zoomIn')
+    })
+    itm.addEventListener('mouseleave', function(){
+      this.classList.add('animated', 'infinite', 'zoomIn')
+    })
+  })
 })
 // ALgunas animaciones de entrada para el texto y el botón
 const animationsFirstEntry = () => {
@@ -33,6 +52,7 @@ const animationsFirstEntry = () => {
         scrollTo: inf + 20
       });
     })
+
 }
 // funcion de modales para las cards y el botón de cta
 const modals = info => {
