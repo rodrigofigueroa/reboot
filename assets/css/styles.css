@@ -187,14 +187,15 @@ figure {
     z-index: 1; }
   .first_section article {
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     padding: 25px 15px;
     position: relative;
     z-index: 2;
     background: #222831;
     color: #fff;
     border-radius: 5px;
-    border: 2px solid #fff; }
+    border: 2px solid #fff;
+    top: -500px; }
     .first_section article h1 {
       font-size: 1.5625rem;
       text-align: left; }
@@ -208,36 +209,48 @@ figure {
     transform: translate(-50%, 0%);
     bottom: -30px;
     left: 50%;
-    width: 200px;
+    width: 100px;
     padding: 20px 10px;
-    border-radius: 5px;
+    border-radius: 100%;
     background: #16a596;
     color: #fff;
-    border: 2px solid #fff; }
+    border: 2px solid #fff;
+    cursor: pointer;
+    outline: none;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; }
+    .first_section button svg {
+      height: 40px;
+      fill: #fff; }
 
-main .info {
-  padding: 80px 20px;
-  flex-flow: row wrap;
-  justify-content: center; }
-  main .info figure {
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden; }
-    main .info figure img {
-      width: 100%; }
-  main .info article {
-    width: 100%;
-    text-align: center; }
-    main .info article h2 {
-      font-size: 1.5625rem;
-      text-align: center;
-      margin: 20px 0;
-      font-weight: 600; }
-    main .info article p {
-      font-size: 1.125rem;
-      text-align: justify; }
+main {
+  position: relative; }
+  main .info {
+    padding: 100px 50px;
+    flex-flow: row wrap;
+    justify-content: center; }
+    main .info figure {
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden; }
+      main .info figure img {
+        width: 100%; }
+    main .info article {
+      width: 100%;
+      max-width: 450px;
+      text-align: center; }
+      main .info article h2 {
+        font-size: 1.5625rem;
+        text-align: center;
+        margin: 20px 0;
+        font-weight: 600; }
+      main .info article p {
+        font-size: 1.125rem;
+        text-align: justify; }
 
 main .cards {
   flex-flow: row wrap;
@@ -265,7 +278,9 @@ main .cards {
     main .cards .card p {
       color: #fff; }
   main .cards .important {
-    width: 80%; }
+    margin: 50px 0px;
+    width: 100%;
+    max-width: 500px; }
     main .cards .important h2 {
       font-size: 30px;
       text-align: center;
@@ -274,5 +289,144 @@ main .cards {
       font-size: 18px;
       text-align: center;
       margin-top: 20px; }
+
+main .cta_video {
+  margin-top: 50px;
+  padding: 50px 20px;
+  background: #222831;
+  flex-flow: row wrap; }
+  main .cta_video .info_video {
+    margin-top: 20px;
+    order: 2;
+    width: 100%; }
+    main .cta_video .info_video h2 {
+      font-size: 1.875rem;
+      color: #fff; }
+    main .cta_video .info_video p {
+      color: #fff;
+      margin-top: 20px;
+      text-align: justify; }
+    main .cta_video .info_video button {
+      width: 150px;
+      padding: 15px 10px;
+      border-radius: 5px;
+      background: #16a596;
+      color: #fff;
+      border: 2px solid #fff;
+      cursor: pointer;
+      outline: none;
+      margin-top: 20px;
+      font-size: 1.25rem; }
+  main .cta_video .cont_video {
+    order: 1;
+    width: 100%; }
+
+main footer {
+  width: 100%;
+  padding: 50px 30px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: #0a043c; }
+  main footer figure {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto; }
+  main footer aside {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px; }
+    main footer aside a {
+      width: 40px;
+      height: 40px;
+      padding: 5px; }
+      main footer aside a svg {
+        transition: 0.6s all ease;
+        width: 100%;
+        fill: #fff; }
+    main footer aside .yt:hover svg {
+      fill: #ff0000; }
+    main footer aside .tw:hover svg {
+      fill: #1da1f2; }
+    main footer aside .twt:hover svg {
+      fill: #9146ff; }
+    main footer aside .fb:hover svg {
+      fill: #3b5998; }
+
+@media screen and (min-width: 767px) {
+  .first_section {
+    justify-content: flex-start; }
+    .first_section article {
+      left: 15%; }
+
+  main .info figure {
+    margin-right: 50px; }
+  main .cta_video {
+    justify-content: space-around;
+    align-items: center; }
+    main .cta_video .info_video {
+      width: 35%;
+      order: 1; }
+    main .cta_video .cont_video {
+      width: 45%;
+      order: 2; }
+  main .cards .card {
+    max-width: 300px;
+    padding: 35px; }
+  main .cards .important {
+    max-width: 600px; }
+  main footer figure {
+    max-width: 30%; }
+  main footer aside {
+    max-width: 60%;
+    margin-top: 0; } }
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .modal.active {
+    display: flex; }
+  .modal .shadow_modal {
+    background: #222831;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0.8; }
+  .modal .txt {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    position: relative;
+    z-index: 3;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    padding: 30px;
+    background: #fff; }
+    .modal .txt h2 {
+      color: #222831;
+      font-size: 2rem;
+      margin-bottom: 20px; }
+    .modal .txt p {
+      color: #222831; }
+    .modal .txt .close {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */
