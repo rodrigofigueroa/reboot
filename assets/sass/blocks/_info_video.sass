@@ -1,0 +1,24 @@
+main
+  .cta_video
+    margin-top: 50px
+    padding: 50px 20px
+    background: $b
+    flex-flow: row wrap
+    .info_video
+      margin-top: 20px
+      order: 2
+      width: 100%
+      h2
+        font-size: 1.875rem
+        color: $w
+      p
+        color: $w
+        margin-top: 20px
+        text-align: justify
+      button
+        @include buttonCustom( 150px, 15px 10px, 5px, $btn, $w, 2px solid $w )
+        margin-top: 20px
+        font-size: 1.25rem
+    .cont_video
+      order: 1
+      width: 100%

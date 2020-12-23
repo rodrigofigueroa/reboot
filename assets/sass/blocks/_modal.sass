@@ -1,0 +1,44 @@
+.modal
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  z-index: 3
+  display: none
+  justify-content: center
+  align-items: center
+  &.active
+    display: flex
+  .shadow_modal
+    background: $b
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 2
+    opacity: 0.8
+  .txt
+    width: 80%
+    max-width: 600px
+    height: auto
+    position: relative
+    z-index: 3
+    border-radius: 5px
+    border: 2px solid $w
+    padding: 30px
+    background: $w
+    h2
+      color: $b
+      font-size: 2rem
+      margin-bottom: 20px
+    p
+      color: $b
+    .close
+      width: 30px
+      height: 30px
+      position: absolute
+      top: 0
+      right: 0
+      cursor: pointer

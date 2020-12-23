@@ -17,7 +17,7 @@
     z-index: 1
   article
     width: 90%
-    max-width: 500px
+    max-width: 400px
     padding: 25px 15px
     position: relative
     z-index: 2
@@ -25,6 +25,7 @@
     color: $w
     border-radius: 5px
     border: 2px solid $w
+    top: -500px
     h1
       font-size: 1.5625rem
       text-align: left
@@ -38,4 +39,11 @@
     transform: translate( -50%, 0% )
     bottom: -30px
     left: 50%
-    @include buttonCustom( 200px, 20px 10px, 5px, $btn, $w, 2px solid $w )
+    @include buttonCustom( 100px, 20px 10px, 100%, $btn, $w, 2px solid $w )
+    height: 100px
+    justify-content: center
+    align-items: center
+    overflow: visible
+    svg
+      height: 40px
+      fill: $w
